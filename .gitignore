@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# ROS 2 build artifacts
+build/
+install/
+log/
+*.bag
+*.bag.active
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Word temporary files
+~$*.docx
+~$*.doc
+
+# ROS launch/log temp files
+*.timestamp

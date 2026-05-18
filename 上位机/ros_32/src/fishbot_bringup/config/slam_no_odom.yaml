@@ -1,0 +1,26 @@
+slam_toolbox:
+  ros__parameters:
+    # Topics & frames
+    scan_topic: /scan
+    map_frame: map
+    base_frame: base_link
+    # 没有外部里程计时，将 odom_frame 设为 base_link，
+    # 让 SLAM 直接发布 map->base_link
+    odom_frame: base_link
+
+    # Sensor fusion
+    use_scan_matching: true
+    use_imu: true            # 若无 IMU，请改为 false
+    imu_topic: /imu/data     # 按你的实际 IMU 话题修改
+
+    # Common mapping params
+    mode: mapping
+    resolution: 0.05
+    max_laser_range: 12.0
+    minimum_time_interval: 0.0
+    map_update_interval: 2.0
+
+    # 关闭“外部姿态/里程计”依赖（保持默认即可）
+    # 注意：slam_toolbox 并无显式 use_odom 开关；
+    # 通过将 odom_frame 设为 base_link 实现“无里程计”工作流。
+
